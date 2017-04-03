@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "PRESTOP APPLICATION"
+TOTAL_JS="total"
+if [ ! -z "$(ps -ef | grep "$TOTAL_JS" | grep -v grep)" ]; then
+    pkill $TOTAL_JS
+fi
