@@ -2,7 +2,7 @@
   "name": "openshift-totaljs",
   "version": "0.0.1",
   "description": "TotalJS sample app for OpenShift 3",
-  "main": "server.js",
+  "main": "release.js",
   "dependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
@@ -19,8 +19,9 @@
     "npm": "*"
   },
   "scripts": {
-    "start": "node server.js",
-    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js"
+    "start": "node release.js",
+    "stop": "pkill total"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,5 @@
   "bugs": {
     "url": "https://github.com/CreationsEcosystem/openshift-totaljs/issues"
   },
-  "homepage": "https://github.com/CreationsEcosystem/openshift-totaljs"
+  "homepage": "https://github.com/CreationsEcosystem/openshift-totaljs#readme"
 }
